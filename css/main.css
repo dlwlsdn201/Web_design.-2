@@ -1,4 +1,15 @@
-body {}
+body {
+    color: white;
+}
+
+input[placeholder]{
+    width: 20em;
+    text-align: center;
+}
+
+input[placeholder]:focus{  /*텍스트창 활성화 시 아웃라인 없애기*/
+    outline: none;
+}
 
 
 @keyframes fadeIn {
