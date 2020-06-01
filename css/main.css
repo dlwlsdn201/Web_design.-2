@@ -1,5 +1,21 @@
 body {
     color: white;
+    
+}
+.wrapper{
+    position: relative;
+    left: 5%;
+    bottom: -25em;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5%;  
+    text-align: center;
+    vertical-align: bottom;
+    align-self: auto;
 }
 
 input[placeholder]{
@@ -24,8 +40,12 @@ input[placeholder]:focus{  /*텍스트창 활성화 시 아웃라인 없애기*/
 
 .bgImage {
     position: absolute;
+    background-size: cover;
+    background-position: center;   /*창 확대 시 배경에 여백 생길 때 문제 해결하는 속성*/
     top: 0;
     left: 0;
+    /* padding-top: calc(853/1280*100%);   이미지 높이 / 이미지 너비 * 100% */
+    /* padding-bottom: calc(853/1280*100%);   이미지 높이 / 이미지 너비 * 100% */
     width: 100%;
     height: 100%;
     z-index: -1;
