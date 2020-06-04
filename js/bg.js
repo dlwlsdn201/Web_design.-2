@@ -1,29 +1,27 @@
 const body = document.querySelector("body");
+const bg_block = body.querySelector(".bg_block");
 
 const IMG_NUMBER = 4;
 
-
 function handleImgLoad() {
-    console.log("finished loading.");
-
+  console.log("finished loading.");
 }
 
-
-
 function paintImage(imgNumber) {
-    const image = new Image();
-    image.src = `./bg/${imgNumber+1}.jpg`;
-    console.log(image.src);
-    image.classList.add("bgImage");
-    body.prepend(image);
-    image.onreadystatechange = function () {
-        if (image.readyState === "complete") {
-            handleImgLoad();
-        };
-        if (document.image) {
-            this.img = new Image();
-        }
+  const image = new Image();
+  image.src = `./bg/${imgNumber + 1}.jpg`;
+  console.log(image.src);
+  image.classList.add("bgImage");
+  //   body.prepend(image);
+  bg_block.prepend(image);
+  image.onreadystatechange = function () {
+    if (image.readyState === "complete") {
+      handleImgLoad();
     }
+    if (document.image) {
+      this.img = new Image();
+    }
+  };
 }
 
 // function paintImage(imgNumber, PreImgArray) {
@@ -37,7 +35,6 @@ function paintImage(imgNumber) {
 //         };
 //     }
 // }
-
 
 // function imagepreload(ary) {
 //     try {
@@ -53,19 +50,17 @@ function paintImage(imgNumber) {
 //     return arr;
 // }
 
-
 function RandomBG() {
-    const number = Math.floor(Math.random() * IMG_NUMBER);
-    return number;
+  const number = Math.floor(Math.random() * IMG_NUMBER);
+  return number;
 }
 
-
 function init() {
-    const randomnumber = RandomBG();
-    handleImgLoad();
-    paintImage(randomnumber);
-    // preImg = imagepreload(["./bg/1.jpg", "./bg/2.jpg", "./bg/3.jpg", "./bg/4.jpg"]);
-    // paintImage(randomnumber, preImg);
+  const randomnumber = RandomBG();
+  handleImgLoad();
+  paintImage(randomnumber);
+  // preImg = imagepreload(["./bg/1.jpg", "./bg/2.jpg", "./bg/3.jpg", "./bg/4.jpg"]);
+  // paintImage(randomnumber, preImg);
 }
 
 init();

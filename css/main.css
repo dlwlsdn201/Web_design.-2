@@ -1,29 +1,37 @@
 body {
     color: white;
-    
-}
-.wrapper{
-    position: relative;
-    left: 5%;
-    bottom: -25em;
+    height: 100%;
+    background-image: linear-gradient(to right, #141E30, #243B55);
+
+
 }
 
-footer{
+.wrapper {
+    position: relative;
+    left: 3%;
+    width: 90%;
+    top: 10em;
+    box-sizing: border-box;
+    font-size: 80%;
+}
+
+footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 5%;  
+    height: 5%;
     text-align: center;
     vertical-align: bottom;
     align-self: auto;
 }
 
-input[placeholder]{
+input[placeholder] {
     width: 20em;
     text-align: center;
 }
 
-input[placeholder]:focus{  /*텍스트창 활성화 시 아웃라인 없애기*/
+input[placeholder]:focus {
+    /*텍스트창 활성화 시 아웃라인 없애기*/
     outline: none;
 }
 
@@ -38,16 +46,60 @@ input[placeholder]:focus{  /*텍스트창 활성화 시 아웃라인 없애기*/
     }
 }
 
+.bg_block {
+    position: fixed;
+    top: 0;
+    /* left: 40%; */
+    width: 80%;
+    height: 120%;
+    left: 30%;
+}
+
 .bgImage {
     position: absolute;
-    background-size: cover;
-    background-position: center;   /*창 확대 시 배경에 여백 생길 때 문제 해결하는 속성*/
+    /* background-size: cover;
+    background-position: center; */
+    /*창 확대 시 배경에 여백 생길 때 문제 해결하는 속성*/
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     /* padding-top: calc(853/1280*100%);   이미지 높이 / 이미지 너비 * 100% */
     /* padding-bottom: calc(853/1280*100%);   이미지 높이 / 이미지 너비 * 100% */
     width: 100%;
-    height: 100%;
+    height: auto;
+    margin: auto;
+    min-width: 100%;
+    max-width: 965px;
+    min-height: 100%;
+    max-height: 100%;
     z-index: -1;
     animation: fadeIn 1s linear;
+}
+
+.query_screen {
+    visibility: hidden;
+}
+
+
+@media screen and (max-width:1280px) {
+    .query_screen {
+        visibility: visible;
+        position: absolute;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        background-color: yellow;
+        z-index: 1;
+        color: black;
+        text-align: center;
+    }
+
+    .query_screen h1 {
+        position: relative;
+        vertical-align: 50%;
+        margin: 0 auto;
+        top: 50%;
+    }
 }
