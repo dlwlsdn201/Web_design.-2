@@ -10,18 +10,20 @@
     <title>Self Project_web design #2</title>
 </head>
 
-<body>
-    <audio src=""></audio>
+<body onload = "loop()">
     <span class="query_screen">
         <h1>스크린 비율이 맞지 않습니다. <br>전체화면 또는 가로를 더 늘려주세요 :)</h1>
     </span>
     <div class="bg_block"></div>
+    <audio id="player" controls="">
+    </audio>
+    <p id="playinfo"></p>
     <div class="wrapper">
         <header>
             <h1 class="main_title">Daily_Vibrant Comment</h1>
-            <p class="main_sentence">긍정적인 하루의 시작을 위해 한 마디
+            <span class="main_sentence">긍정적인 하루의 시작을 위해 한 마디
                 남겨주세요 :)
-            </p>
+            </span>
         </header>
         <form action="#">
             <input type="text" placeholder="write some comment for everyone !">
@@ -45,7 +47,7 @@
         </div>
     </footer>
     <script src="./js/bg.js"></script>
-
+    <script src="./js/bgm.js"></script>
 </body>
 
 </html>
