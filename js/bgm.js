@@ -3,7 +3,8 @@ let player;
 // 오디오 파일 리스트
 const audioFiles = [
   './bgm/castle.mp3',
-  './bgm/beautiful.mp3'
+  './bgm/beautiful.mp3',
+  './bgm/giveheart.mp3'
 ];
 // 방문할 때마다 순서 다르게
 function shuffle(audiolist) {
@@ -21,8 +22,9 @@ function shuffle(audiolist) {
 // 현재 재생 곡 정보 manually 불러오기
 let playinginfo;
 const lists = [
-  '임영웅 - 마법의 성',
-  '유리상자 - 아름다운 세상'
+  '임영웅 - 마법의 성♬',
+  '유리상자 - 아름다운 세상♬',
+  '아이유 - 마음을 드려요♬'
 ];
 
 function preloadAudio(file_url) {
@@ -88,6 +90,11 @@ function getSRC() {
       playinginfo = lists[1];
       document.getElementById('playinfo').innerHTML = playinginfo;
       break;
+    case 'file:///J:/User/OneDrive/Programming/Self_Project/Web_design.-2/bgm/giveheart.mp3':
+      playinginfo = lists[2];
+      document.getElementById('playinfo').innerHTML = playinginfo;
+      break;
+    
     default:
       playinginfo = '알 수 없음';
       document.getElementById('playinfo').innerHTML = playinginfo;

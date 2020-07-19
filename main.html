@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/comment.js"></script>
     <script src="https://kit.fontawesome.com/955489ca42.js" crossorigin="anonymous"></script>
     <title>Self Project_web design #2</title>
 </head>
@@ -21,14 +22,29 @@
     <div class="wrapper">
         <header>
             <h1 class="main_title">Daily_Vibrant Comment</h1>
-            <span class="main_sentence">긍정적인 하루의 시작을 위해 한 마디
-                남겨주세요 :)
+            <span class="main_sentence"> 오늘 하루동안의 기분을 한 마디로 표현해보세요!
             </span>
         </header>
-        <form action="#">
-            <input type="text" placeholder="write some comment for everyone !">
-            <input type="button" value="등록">
-        </form>
+        <table class="tbl">
+            <tr>
+                <td class="form">
+                    <form action="#">
+                        <input id="uContent" type="text" placeholder="write some comment for everyone !" onkeyup="enterkey();" >
+                        <input id="Enter" type="button" value="등록" onclick="main();">
+                    </td>
+                </tr>
+            </form>
+        </table>
+        <br><br>
+        <!-- 방명록의 내용이 리스트 형식으로 보여지는 레이아웃 테이블 -->
+        <div class="comment_container">
+            <table class="tbl" id="bbsTable" width="100%" border="1px white solid">
+            <tr>
+                <th class="comment_title" width="15%">번호</th>
+                <th class="comment_title" width="85%" float="left">내용</th>
+            </tr>
+            </table>
+        </div>
     </div>
     <footer>
         <div class="sns_icon">

@@ -6,12 +6,34 @@ body {
 
 }
 
+.comment_title{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+table{
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.comment_container{
+    background-color: black;
+    height: 360px;
+}
+
+td:nth-child(2){
+    float: left;
+    margin-left: 10px;
+}
+
+
+
 #playinfo{
     position: absolute;
     width: 20%;
-    left: 3em;
+    left: 3.5em;
     text-align: center;
-    margin-top: 5px;
+    margin-top: 15px;
     margin-bottom: 10px;
     opacity: 0.3;
     top: 4em;
@@ -21,6 +43,7 @@ audio{
     position: absolute;
     top: 0;
     left: 3em;
+    top: 1em;
     opacity: 0.3;
 }
 
@@ -29,7 +52,7 @@ audio{
     left: 1%;
     width: 26%;
     margin-left: 10px;
-    top: 10em;
+    top: 4em;
     box-sizing: border-box;
     font-size: 80%;
     text-align: center;
