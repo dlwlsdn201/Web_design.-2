@@ -30,7 +30,6 @@ function main()
     //alert("함수 호출 확인");
     
     var uContent = document.getElementById("uContent").value;
-    
     var len = boardArray.length;
     //alert(len);      //-- 이 시점에서 테스트 시 → 0
     
@@ -52,10 +51,12 @@ function print(idx)
     
     var tableNode = document.getElementById("bbsTable");
     var trNode = document.createElement("tr");
+    trNode.className = "user_comment";
     
     trNode.appendChild(createTdNode((idx+1).toString()));
     trNode.appendChild(createTdNode(boardArray[idx].content));
-    
+    trNode.style.color = textColor();
+
     tableNode.appendChild(trNode);
 }
 
@@ -67,9 +68,20 @@ function createTdNode(val)
     return tdNode;
 }
 
+function textColor(){
+    var choice_color = ''
+    if (this.value === 'white'){
+    choice_color = 'white';
+}else if (this.value ==='yellow'){
+    choice_color = 'yellow';
+}else{
+    choice_color = 'orange';
+}
+return choice_color;
+};
+
 function clear()
 {
-
     document.getElementById("uContent").value="";
     
 }

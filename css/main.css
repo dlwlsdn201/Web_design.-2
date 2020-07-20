@@ -1,15 +1,80 @@
 body {
     color: white;
     height: 100px;
-    background-image: linear-gradient(to right, #141E30, #243B55);
+    background-image: linear-gradient(to right, #1D4350, #A43931);
     box-sizing: border-box;
 
+}
+
+th,tr{
+    padding: 1px;
+}
+
+table{
+    border-spacing: 5px;
 }
 
 .comment_title{
     font-size: 16px;
     font-weight: bold;
+    position: relative;
+    height: 100%;
 }
+
+.comment_title:first-child{
+    border-right: 1px solid white;
+}
+
+.colors{
+    display: inline-flex;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.color{
+    justify-content: space-around;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    margin: 0 20px;
+    border: 1px dashed black;
+    border-radius: 100%;
+    font-weight: bold;
+}
+
+.color:first-child:hover{
+    background-color: white;
+    color : black;
+    cursor: pointer;
+}
+
+.color:first-child:visited{
+    background-color: white;
+    color : black;
+    cursor: pointer;
+}
+
+.color:nth-child(2){
+    color : yellow;
+}
+
+.color:nth-child(2):hover{
+    background-color:yellow;
+    color : black;
+    cursor: pointer;
+}
+
+.color:last-child{
+    color : orange;
+}
+
+.color:last-child:hover{
+    background-color:orange;
+    color : black;
+    cursor: pointer;
+}
+
+
 
 table{
     border-collapse: separate;
@@ -17,16 +82,40 @@ table{
 }
 
 .comment_container{
-    background-color: black;
+    position : relative;
     height: 360px;
+    z-index: -3;
+}
+
+.comment_container:after{
+    content : '';
+    display: block;
+    position: inherit;
+    opacity: 0.2;
+    background-image: linear-gradient(to right,#649173,#dbd5a4);
+    background-size: 100%;
+    z-index: -1;
+    width:100%;
+    height: 100%;
+    border: 1px dashed black;
+}
+
+
+.user_comment{
+    height: 100%;
+}
+.user_comment > td{
+    z-index: 3;
+    border: 1px dotted white;
+    height: 100%;
+    padding: 5px 0;
 }
 
 td:nth-child(2){
-    float: left;
+    text-align: left;
     margin-left: 10px;
+    height: 100%;
 }
-
-
 
 #playinfo{
     position: absolute;
