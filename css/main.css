@@ -3,7 +3,6 @@ body {
     height: 100px;
     background-image: linear-gradient(to right, #1D4350, #A43931);
     box-sizing: border-box;
-
 }
 
 th,tr{
@@ -29,9 +28,43 @@ table{
     display: inline-flex;
     margin-top: 15px;
     margin-bottom: 0px;
+    /* margin-left : 10%;
+    width:100%; */
 }
 
-.color{
+.white:hover{
+    background-color: white;
+    color : black;
+    cursor: pointer;
+}
+
+.white:visited{
+    background-color: white;
+    color : black;
+    cursor: pointer;
+}
+.yellow{
+    color : yellow;
+}
+
+.yellow:hover{
+    background-color:yellow;
+    color : black;
+    cursor: pointer;
+}
+
+.orange{
+    color : orange;
+}
+
+.orange:hover{
+    background-color:orange;
+    color : black;
+    cursor: pointer;
+    
+}
+
+.white,.yellow,.orange{
     justify-content: space-around;
     line-height: 50px;
     width: 50px;
@@ -42,52 +75,19 @@ table{
     font-weight: bold;
 }
 
-.color:first-child:hover{
-    background-color: white;
-    color : black;
-    cursor: pointer;
-}
-
-.color:first-child:visited{
-    background-color: white;
-    color : black;
-    cursor: pointer;
-}
-
-.color:nth-child(2){
-    color : yellow;
-}
-
-.color:nth-child(2):hover{
-    background-color:yellow;
-    color : black;
-    cursor: pointer;
-}
-
-.color:last-child{
-    color : orange;
-}
-
-.color:last-child:hover{
-    background-color:orange;
-    color : black;
-    cursor: pointer;
-}
-
-
-
 table{
     border-collapse: separate;
     border-spacing: 0 10px;
+    width: 100%;
 }
 
 .comment_container{
     position : relative;
-    height: 360px;
+    height: 320px;
     z-index: -3;
 }
 
-.comment_container:after{
+/* .comment_container:after{
     content : '';
     display: block;
     position: inherit;
@@ -98,7 +98,7 @@ table{
     width:100%;
     height: 100%;
     border: 1px dashed black;
-}
+} */
 
 
 .user_comment{
@@ -133,6 +133,7 @@ audio{
     top: 0;
     left: 3em;
     top: 1em;
+    width: 22%;
     opacity: 0.3;
 }
 

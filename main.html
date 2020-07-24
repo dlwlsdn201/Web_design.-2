@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main.css">
     <script src="./js/comment.js"></script>
+    <script src="./js/fontcolor.js"></script>
     <script src="https://kit.fontawesome.com/955489ca42.js" crossorigin="anonymous"></script>
     <title>Self Project_web design #2</title>
 </head>
@@ -29,9 +30,9 @@
             <tr>
                 <td class="form">
                     <div class="colors">
-                        <a class="color white" onclick="textColor()">white</span>
-                        <a class="color yellow" onclick="textColor()">yellow</span>
-                        <a class="color orange" onclick="textColor()">orange</span>
+                        <span class="white" onclick="textColor('white')" id='White'><a >white</a></span>
+                        <span class="yellow"><a onclick="textColor('yellow')">yellow</a></span>
+                        <span class="orange"><a onclick="textColor('orange')">orange</a></span>
                     </div>
                     <form action="#">
                         <input id="uContent" type="text" placeholder="write some comment for everyone !" onkeyup="enterkey();" >

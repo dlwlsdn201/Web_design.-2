@@ -55,7 +55,7 @@ function print(idx)
     
     trNode.appendChild(createTdNode((idx+1).toString()));
     trNode.appendChild(createTdNode(boardArray[idx].content));
-    trNode.style.color = textColor();
+    trNode.style.color = UserColor();
 
     tableNode.appendChild(trNode);
 }
@@ -68,17 +68,6 @@ function createTdNode(val)
     return tdNode;
 }
 
-function textColor(){
-    var choice_color = ''
-    if (this.value === 'white'){
-    choice_color = 'white';
-}else if (this.value ==='yellow'){
-    choice_color = 'yellow';
-}else{
-    choice_color = 'orange';
-}
-return choice_color;
-};
 
 function clear()
 {
@@ -90,4 +79,9 @@ function enterkey(){
     if (window.event.keyCode == 13){
        main();
     }
+}
+
+function UserColor(){
+    var fontColor = USER_COLOR;
+    return fontColor;
 }
