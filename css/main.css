@@ -1,243 +1,238 @@
 body {
-    color: white;
-    height: 100px;
-    background-image: linear-gradient(to right, #1D4350, #A43931);
-    box-sizing: border-box;
+  color: white;
+  height: 2000px;
+  background-image: linear-gradient(to right, #1d4350, #a43931);
+  box-sizing: border-box;
+  /* overflow: hidden; */
 }
 
-th,tr{
-    padding: 1px;
+th,
+tr {
+  padding: 1px;
 }
 
-table{
-    border-spacing: 5px;
+table {
+  border-spacing: 5px;
 }
 
-.comment_title{
-    font-size: 16px;
-    font-weight: bold;
-    position: relative;
-    height: 100%;
+.comment_title {
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  height: 100%;
+  border-bottom: 1px solid white;
+  padding: 0px auto;
+  border-spacing: 0;
+  white-space: normal;
+  border-spacing: 0;
 }
 
-.comment_title:first-child{
-    border-right: 1px solid white;
+.comment_title:first-child {
+  border-right: 1px solid white;
 }
 
-.colors{
-    display: inline-flex;
-    margin-top: 15px;
-    margin-bottom: 0px;
-    /* margin-left : 10%;
+.colors {
+  display: inline-flex;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  /* margin-left : 10%;
     width:100%; */
 }
 
-.white:hover{
-    background-color: white;
-    color : black;
-    cursor: pointer;
+.white:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
 }
 
-.white:visited{
-    background-color: white;
-    color : black;
-    cursor: pointer;
-}
-.yellow{
-    color : yellow;
+.white:visited {
+  background-color: white;
+  color: black;
+  cursor: pointer;
 }
 
-.yellow:hover{
-    background-color:yellow;
-    color : black;
-    cursor: pointer;
+.yellow {
+  color: yellow;
 }
 
-.orange{
-    color : orange;
+.yellow:hover {
+  background-color: yellow;
+  color: black;
+  cursor: pointer;
 }
 
-.orange:hover{
-    background-color:orange;
-    color : black;
-    cursor: pointer;
-    
+.orange {
+  color: orange;
 }
 
-.white,.yellow,.orange{
-    justify-content: space-around;
-    line-height: 50px;
-    width: 50px;
-    height: 50px;
-    margin: 0 20px;
-    border: 1px dashed black;
-    border-radius: 100%;
-    font-weight: bold;
+.orange:hover {
+  background-color: orange;
+  color: black;
+  cursor: pointer;
 }
 
-table{
-    border-collapse: separate;
-    border-spacing: 0 10px;
-    width: 100%;
+.white,
+.yellow,
+.orange {
+  justify-content: space-around;
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+  margin: 0 20px;
+  border: 1px dashed black;
+  border-radius: 100%;
+  font-weight: bold;
 }
 
-.comment_container{
-    position : relative;
-    height: 320px;
-    z-index: -3;
+table {
+  border-collapse: separate;
+  border-spacing: 0 5px;
+  width: 100%;
 }
 
-/* .comment_container:after{
-    content : '';
-    display: block;
-    position: inherit;
-    opacity: 0.2;
-    background-image: linear-gradient(to right,#649173,#dbd5a4);
-    background-size: 100%;
-    z-index: -1;
-    width:100%;
-    height: 100%;
-    border: 1px dashed black;
-} */
-
-
-.user_comment{
-    height: 100%;
-}
-.user_comment > td{
-    z-index: 3;
-    border: 1px dotted white;
-    height: 100%;
-    padding: 5px 0;
+.comment_container {
+  position: relative;
+  height: 280px;
+  overflow: auto;
+  overflow-x: hidden;
+  width: 100%;
 }
 
-td:nth-child(2){
-    text-align: left;
-    margin-left: 10px;
-    height: 100%;
+.user_comment > td {
+  border: 1px dotted white;
+  padding: 5px 5px;
 }
 
-#playinfo{
-    position: absolute;
-    width: 20%;
-    left: 3.5em;
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    opacity: 0.3;
-    top: 4em;
+td:nth-child(2) {
+  text-align: left;
+  margin-left: 10px;
+  width: 100%;
 }
 
-audio{
-    position: absolute;
-    top: 0;
-    left: 3em;
-    top: 1em;
-    width: 22%;
-    opacity: 0.3;
+td:last-child {
+  z-index: 3;
+}
+
+#playinfo {
+  position: absolute;
+  width: 20%;
+  left: 3.5em;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  opacity: 0.3;
+  top: 4em;
+}
+
+audio {
+  position: absolute;
+  top: 0;
+  left: 3em;
+  top: 1em;
+  width: 22%;
+  opacity: 0.3;
 }
 
 .wrapper {
-    position: relative;
-    left: 1%;
-    width: 26%;
-    margin-left: 10px;
-    top: 4em;
-    box-sizing: border-box;
-    font-size: 80%;
-    text-align: center;
+  position: relative;
+  left: 1%;
+  width: 26%;
+  margin-left: 10px;
+  top: 4em;
+  box-sizing: border-box;
+  font-size: 80%;
+  text-align: center;
 }
 
 footer {
-    position: absolute;
-    bottom: 5px;
-    width: 100%;
-    height: 5%;
-    text-align: center;
-    vertical-align: bottom;
-    align-self: auto;
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  height: 5%;
+  text-align: center;
+  vertical-align: bottom;
+  align-self: auto;
 }
 
 input[placeholder] {
-    width: 20em;
-    height: 2em;
-    text-align: center;
-    margin-top: 15px;
+  width: 250px;
+  height: 26px;
+  text-align: center;
+  margin-top: 15px;
 }
 
 input[placeholder]:focus {
-    /*텍스트창 활성화 시 아웃라인 없애기*/
-    outline: none;
+  /*텍스트창 활성화 시 아웃라인 없애기*/
+  outline: none;
 }
 
-input[type=button]{
-    height: 2.5em;
+input[type="button"] {
+  height: 30px;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
+  from {
+    opacity: 0;
+  }
 
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
 
 .bg_block {
-    position: fixed;
-    top: 0;
-    /* left: 40%; */
-    width: 80%;
-    height: 120%;
-    left: 30%;
+  position: fixed;
+  top: 0;
+  /* left: 40%; */
+  width: 80%;
+  height: 120%;
+  left: 30%;
 }
 
 .bgImage {
-    position: absolute;
-    /* background-size: cover;
+  position: absolute;
+  /* background-size: cover;
     background-position: center; */
-    /*창 확대 시 배경에 여백 생길 때 문제 해결하는 속성*/
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* padding-top: calc(853/1280*100%);   이미지 높이 / 이미지 너비 * 100% */
-    /* padding-bottom: calc(853/1280*100%);   이미지 높이 / 이미지 너비 * 100% */
-    width: 100%;
-    height: auto;
-    margin: auto;
-    min-width: 100%;
-    max-width: 965px;
-    min-height: 100%;
-    max-height: 100%;
-    z-index: -1;
-    animation: fadeIn 1s linear;
+  /*창 확대 시 배경에 여백 생길 때 문제 해결하는 속성*/
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* padding-top: calc(853/1280*100%);   이미지 높이 / 이미지 너비 * 100% */
+  /* padding-bottom: calc(853/1280*100%);   이미지 높이 / 이미지 너비 * 100% */
+  width: 100%;
+  height: auto;
+  margin: auto;
+  min-width: 100%;
+  max-width: 965px;
+  min-height: 100%;
+  max-height: 100%;
+  z-index: -1;
+  animation: fadeIn 1s linear;
 }
 
 .query_screen {
-    visibility: hidden;
+  visibility: hidden;
 }
 
+@media (max-width: 1280px), (max-height: 550px) {
+  .query_screen {
+    visibility: visible;
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background-color: yellow;
+    z-index: 1;
+    color: black;
+    text-align: center;
+  }
 
-@media (max-width : 1280px) , (max-height: 550px){
-    .query_screen {
-        visibility: visible;
-        position: absolute;
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        bottom: 0;
-        background-color: yellow;
-        z-index: 1;
-        color: black;
-        text-align: center;
-    }
-
-    .query_screen h1 {
-        position: relative;
-        vertical-align: 50%;
-        margin: 0 auto;
-        top: 50%;
-    }
+  .query_screen h1 {
+    position: relative;
+    vertical-align: 50%;
+    margin: 0 auto;
+    top: 50%;
+  }
 }
