@@ -54,9 +54,14 @@ function print(idx) {
     trNode.appendChild(createTdNode((idx + 1).toString()));
     trNode.appendChild(createTdNode(boardArray[idx].content));
     trNode.style.color = UserColor();
-
+    
     tableNode.appendChild(trNode);
-}
+//     var commentCOUNT = document.querySelectorAll('.user_comment');
+//     var commentlength = commentCOUNT.length;
+//     if(commentlength > 8){
+//         scrollAutoTarget();
+//     };
+};
 
 function createTdNode(val) {
     var textNode = document.createTextNode(val);
@@ -64,7 +69,6 @@ function createTdNode(val) {
     tdNode.appendChild(textNode);
     return tdNode;
 }
-
 
 function clear() {
     document.getElementById("uContent").value = "";
